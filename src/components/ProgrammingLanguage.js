@@ -2,22 +2,23 @@ import React, { useState, useEffect } from 'react';
 import Vote from './Vote';
 import axios from 'axios';
 
-function ProgrammingLanguage (props) {
-  const APIHOSTPORT = `${window._env_.REACT_APP_APIHOSTPORT}`;
-
+function ProgrammingLanguage ({id, logo}) {
   const [loaded, setLoaded] = useState(false);
   const [language, setLanguage] = useState({});
 
   useEffect(() => {
-    var url = `http://${APIHOSTPORT}/languages/${props.id}`;
-    console.log(`URL->${url}`);
-    axios.get(url).then(
-      response => {
-        setLanguage(response.data)
-        setLoaded(true);
-      }
-    );
-  }, []);
+    async function fetchData() {
+      const APIHOSTPORT = `${window._env_.REACT_APP_APIHOSTPORT}`;
+      const url = `http://${APIHOSTPORT}/languages/${id}`;
+      await axios.get(url).then(
+        response => {
+          setLanguage(response.data)
+          setLoaded(true);
+        }
+      );
+    }
+    fetchData();
+  }, [id]);
 
   return (
     <div>
@@ -30,8 +31,8 @@ function ProgrammingLanguage (props) {
             var votecount = language.codedetail.votes;
             return (
               <div class="container">
-                <h2>{props.name}</h2>
-                <p><Vote id={props.id} count={votecount}/></p>
+                <h2>{id}</h2>
+                <p><Vote id={id} count={votecount}/></p>
                 <p><b>Uses</b>: {usecase}</p>
                 <p><b>Rank</b>: {rank}</p>
                 <p><a href={homepage} target="blank">{homepage}</a></p>
@@ -39,7 +40,7 @@ function ProgrammingLanguage (props) {
                   <div class="row">
                     <div class="col">
                       <div class="parent">
-                        <img src={`./img/${props.logo}`} alt="logo" class="center-block"/>
+                        <img src={`./img/${logo}`} alt="logo" class="center-block"/>
                       </div>
                     </div>
                   </div>
