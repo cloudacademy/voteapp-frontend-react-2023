@@ -8,10 +8,10 @@ function ProgrammingLanguage (props) {
   const [loaded, setLoaded] = useState(false);
   const [language, setLanguage] = useState({});
 
-  useEffect(async () => {
+  useEffect(() => {
     var url = `http://${APIHOSTPORT}/languages/${props.id}`;
     console.log(`URL->${url}`);
-    await axios.get(url).then(
+    axios.get(url).then(
       response => {
         setLanguage(response.data)
         setLoaded(true);
