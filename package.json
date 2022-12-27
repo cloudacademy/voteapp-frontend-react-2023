@@ -1,0 +1,36 @@
+{
+  "name": "vote-app",
+  "version": "1.0.21",
+  "author": {
+    "name": "Jeremy Cook",
+    "email": "jeremy.cook@cloudacademy.com",
+    "url": "https://linkedin.com/in/jeremycook123"
+  },
+  "private": true,
+  "dependencies": {
+    "axios": "^1.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1"
+  },
+  "resolutions": {
+    "browserslist": "^4.21.4",
+    "glob-parent": "^6.0.2"
+  },
+  "scripts": {
+    "dev": "chmod +x ./env.sh && ./env.sh && cp env-config.js ./public/ && react-scripts start",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
