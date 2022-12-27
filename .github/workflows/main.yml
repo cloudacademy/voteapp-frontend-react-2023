@@ -6,7 +6,7 @@ on:
       - '1.*.*'
   pull_request:
     branches:
-      - master
+      - main
   schedule:
     - cron: "0 0 * * *"
 
