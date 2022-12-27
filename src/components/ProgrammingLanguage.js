@@ -31,7 +31,6 @@ function ProgrammingLanguage ({id, logo}) {
             var votecount = language.codedetail.votes;
             return (
               <div class="container">
-                <h2>{id}</h2>
                 <p><Vote id={id} count={votecount}/></p>
                 <p><b>Uses</b>: {usecase}</p>
                 <p><b>Rank</b>: {rank}</p>
