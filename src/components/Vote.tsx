@@ -14,6 +14,7 @@ interface IVoteResponse {
 
 function Vote ({ id, count }: IVoteProps) {
   const APIHOSTPORT = `${window._env_.REACT_APP_APIHOSTPORT}`;
+
   const [vote, setVote] = useState<number>(count);
 
   const handleClick = () => {
@@ -33,7 +34,7 @@ function Vote ({ id, count }: IVoteProps) {
 
   return (
     <div id={id}>
-      <Button variant="primary" onClick={handleClick}>+1</Button>{' '}
+      <Button variant="primary" onClick={handleClick}>+1</Button>
       <div>
         <b>Votes</b>: {vote}
       </div>

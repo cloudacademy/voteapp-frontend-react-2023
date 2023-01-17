@@ -48,17 +48,29 @@ function ProgrammingLanguage ({ id, logo }: IProgrammingLanguageProps) {
       { loaded
         ? (
             <div className="container">
-              <p><Vote id={id} count={votecount}/></p>
-              <p><b>Uses</b>: {usecase}</p>
-              <p><b>Rank</b>: {rank}</p>
-              <p><a href={homepage} target="blank">{homepage}</a></p>
-              <div className="container">
-                <div className="row">
-                  <div className="col">
-                    <div className="parent">
-                      <Image src={`./img/${logo}`} alt="logo" width={100}/>
-                    </div>
-                  </div>
+              <div className="row">
+                <div className="col g-3">
+                  <Vote id={id} count={votecount}/>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col g-3">
+                  <b>Uses</b>: {usecase}
+                </div>
+              </div>
+              <div className="row">
+                <div className="col g-3">
+                  <b>Rank</b>: {rank}
+                </div>
+              </div>
+              <div className="row">
+                <div className="col g-3">
+                  <a href={homepage} target="blank">{homepage}</a>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col g-3">
+                <Image src={`./img/${logo}`} alt="logo" width={100}/>
                 </div>
               </div>
             </div>
