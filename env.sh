@@ -3,8 +3,6 @@
 # Recreate config file
 echo env.sh script started...
 whoami
-pwd
-ls -la
 echo
 
 echo "" > ./env-config.js
