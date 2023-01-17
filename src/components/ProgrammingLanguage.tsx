@@ -65,7 +65,7 @@ function ProgrammingLanguage ({ id, logo }: IProgrammingLanguageProps) {
               </div>
               <div className="row">
                 <div className="col g-3">
-                  <a href={homepage} target="blank">{homepage}</a>
+                  <a href={homepage} target="blank" className="text-decoration-none">{homepage}</a>
                 </div>
               </div>
               <div className="row">

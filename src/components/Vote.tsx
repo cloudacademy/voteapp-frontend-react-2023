@@ -34,7 +34,7 @@ function Vote ({ id, count }: IVoteProps) {
 
   return (
     <div id={id}>
-      <Button variant="primary" onClick={handleClick}>+1</Button>
+      <Button variant="outline-success" onClick={handleClick}>+1</Button>
       <div>
         <b>Votes</b>: {vote}
       </div>
