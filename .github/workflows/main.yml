@@ -26,7 +26,7 @@ jobs:
           yarn version
           yarn install
           yarn build
-          tar -czf release-${{ env.RELEASE_VERSION }}.tar.gz dist
+          tar -czf release-${{ env.RELEASE_VERSION }}.tar.gz build
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2

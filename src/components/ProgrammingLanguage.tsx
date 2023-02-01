@@ -8,15 +8,13 @@ interface IProgrammingLanguageProps{
   logo: string;
 }
 
-interface ICodeDetail {
-  usecase: string;
-  rank: number;
-  homepage: string;
-  votes: number;
-}
-
 interface ILanguage {
-  codedetail: ICodeDetail;
+  codedetail: {
+    usecase: string;
+    rank: number;
+    homepage: string;
+    votes: number;
+  }
 }
 
 function ProgrammingLanguage ({ id, logo }: IProgrammingLanguageProps) {

@@ -41,8 +41,8 @@
   },
   "scripts": {
     "prebuild": "run-s clean lint",
-    "build": "chmod +x ./env.sh && ./env.sh && cp env-config.js ./public/ && parcel build public/index.html -d dist --no-source-maps --public-url ./ '.' && cp -R public/img dist",
-    "clean": "rimraf ./dist ./.cache",
+    "build": "chmod +x ./env.sh && ./env.sh && cp env-config.js ./public/ && parcel build public/index.html -d build --no-source-maps --public-url ./ '.' && cp -R public/img build",
+    "clean": "rimraf ./build ./.cache",
     "lint": "run-s lint:code",
     "lint:code": "eslint --ext ts,tsx src",
     "start": "parcel public/index.html --open"
