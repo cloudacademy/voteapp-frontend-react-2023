@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Recreate config file
+echo
 echo env.sh script started...
-whoami
 echo
 
 echo "" > ./env-config.js
@@ -33,6 +33,7 @@ done < .env
 
 echo "}" >> ./env-config.js
 
+echo env-config.js generated successfully:
 cat ./env-config.js
 echo
 echo env.sh script finished!

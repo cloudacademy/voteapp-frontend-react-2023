@@ -1,4 +1,4 @@
 
 window._env_ = {
-  REACT_APP_APIHOSTPORT: "localhost:8080",
+  REACT_APP_APIHOSTPORT: "blah2:8080",
 }

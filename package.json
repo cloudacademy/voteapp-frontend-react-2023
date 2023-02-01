@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
@@ -41,7 +42,7 @@
   },
   "scripts": {
     "prebuild": "run-s clean lint",
-    "build": "chmod +x ./env.sh && ./env.sh && cp env-config.js ./public/ && parcel build public/index.html -d build --no-source-maps --public-url ./ '.' && cp -R public/img build",
+    "build": "parcel build public/index.html -d build --no-source-maps --public-url ./ && cp -R public/img build && chmod +x ./env.sh && ./env.sh && cp env-config.js build && sed -i -E 's/env-config.[a-z]{3}[0-9]{5}.js/env-config.js/' build/index.html && rm build/env-config.*.js",
     "clean": "rimraf ./build ./.cache",
     "lint": "run-s lint:code",
     "lint:code": "eslint --ext ts,tsx src",
@@ -49,3 +50,6 @@
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
+
+
+
