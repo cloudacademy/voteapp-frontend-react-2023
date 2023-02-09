@@ -8,7 +8,7 @@ function VoteApp () {
       <div className="jumbotron">
         <div className="container">
           <h1 className="display-3">Language Vote App v3</h1>
-          &copy; CloudAcademy ❤ DevOps 2023 v3.0.1
+          &copy; CloudAcademy ❤ DevOps 2023 v3.0.2
         </div>
       </div>
 
