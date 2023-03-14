@@ -24,7 +24,9 @@ function ProgrammingLanguage ({ id, logo }: IProgrammingLanguageProps) {
   useEffect(() => {
     async function fetchData () {
       const APIHOSTPORT = `${window._env_.REACT_APP_APIHOSTPORT}`;
-      const url = `https://${APIHOSTPORT}/api/languages/${id}`;
+      // used by Azure Function App
+      // const url = `https://${APIHOSTPORT}/api/languages/${id}`;
+      const url = `http://${APIHOSTPORT}/languages/${id}`;
       await axios.get(url).then(
         response => {
           const lang = response.data as ILanguage;

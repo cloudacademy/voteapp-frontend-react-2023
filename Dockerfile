@@ -1,6 +1,6 @@
 FROM nginx
 
-COPY dist /usr/share/nginx/html/
+COPY build /usr/share/nginx/html/
 COPY .env /usr/share/nginx/html/
 
 COPY conf/conf.d/default.conf /etc/nginx/conf.d/
