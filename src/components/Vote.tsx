@@ -19,13 +19,11 @@ function Vote ({ id, count }: IVoteProps) {
 
   const handleClick = () => {
     (async () => {
-      // used by Azure Function App
-      // const url = `https://${APIHOSTPORT}/api/languages/${id}/vote`;
       const url = `http://${APIHOSTPORT}/languages/${id}/vote`;
       try {
-        const response = await axios.get(url);
+        const response = await axios.get<IVoteResponse>(url);
         if (response.status === 200) {
-          const lang = response.data as IVoteResponse;
+          const lang = response.data;
           setVote(lang.votes);
         }
       } catch (error) {
